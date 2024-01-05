@@ -7,8 +7,8 @@ files:                     #is an array of files to be copied from the source to
     AfterInstall:          #specifies a script to be executed after the installation of the application.
       - location: scripts/install_nginx.sh #specifies the location of the script file to be executed
         timeout: 300       #specifies the maximum amount of time in seconds that the script can run for.
-        runas: root        #specifies the user that the script should be run as.
+        runas: ec2-user        #specifies the user that the script should be run as.
     ApplicationStart:      #specifies a script to be executed after the application has started.
       - location: scripts/start_nginx.sh
         timeout: 300
-        runas: root
+        runas: ec2-user
